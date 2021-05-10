@@ -81,4 +81,3 @@ sns.boxplot(data=data[["PPE"]], palette="YlOrBr")
 
 plt.suptitle("Boxplots to visualize outliers", fontsize=30)
 plt.savefig("Boxplots to visualize outliers.svg")
-plt.show()
