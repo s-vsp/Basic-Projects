@@ -94,3 +94,18 @@ outliers_dict, multi_outliers = iqr.detect()
 # Some samples have a lot of outliers in different features, although as we are facing medical data, it is not so obvious
 # to drop them off. Anyway it is nice to have them detected
 
+
+## 1.4. Basic data visualizations ##
+
+# 1.4.1. Correlation Heatmap #
+
+plt.figure(dpi=300, figsize=(16,16))
+sns.heatmap(data[data.columns[0:24]].corr(), annot=True, fmt=".2f", cmap="YlOrBr")
+plt.title("Correlation heatmap", fontsize=30)
+#plt.savefig("Correlation heatmap.svg")
+
+# The main thing that should be intriguing us, is correlation between features and status-label.
+
+# The strongest correlation with status is detected for "spread1" and "PPE", but still they are not on super-high level
+# We can't deny status dependance on other features.
+
