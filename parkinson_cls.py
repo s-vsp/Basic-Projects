@@ -80,4 +80,6 @@ plt.subplot(5,2,10)
 sns.boxplot(data=data[["PPE"]], palette="YlOrBr")
 
 plt.suptitle("Boxplots to visualize outliers", fontsize=30)
-plt.savefig("Boxplots to visualize outliers.svg")
+#plt.savefig("Boxplots to visualize outliers.svg")
+
+# Detecting outliers
