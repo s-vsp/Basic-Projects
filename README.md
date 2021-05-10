@@ -5,3 +5,4 @@
 > 1.2. Checking for missing values <br /> 
 > 1.3. Outliers detection <br /> 
 > 1.4. Basic data visulaizations <br /> 
+>> 1.4.1. Correlation heatmap <br />
