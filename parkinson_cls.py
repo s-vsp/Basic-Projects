@@ -12,11 +12,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-##-----------------------##
-## 1. Data Preprocessing ##
-##-----------------------##
+from KamilMachineLearning import IQR_technique
 
-# 1.1. Loading data #
+###-----------------------###
+### 1. Data Preprocessing ###
+###-----------------------###
+
+## 1.1. Loading data ##
 
 data = pd.read_csv("parkinsons.data")
 
@@ -28,14 +30,14 @@ data = pd.concat([data, temporary], axis=1)
 data_dsc = data.describe()
 
 
-# 1.2. Checking for missing values #
+## 1.2. Checking for missing values ##
 
 null_values = data.isnull().sum()
 
 # There are no missing values in the dataset
 
 
-# 1.3. Outliers detection #
+## 1.3. Outliers detection ##
 """
 Outliers can have a significant effect on the whole process of predictions and data analysis, it is important to 
 handle with them properly.
@@ -82,4 +84,13 @@ sns.boxplot(data=data[["PPE"]], palette="YlOrBr")
 plt.suptitle("Boxplots to visualize outliers", fontsize=30)
 #plt.savefig("Boxplots to visualize outliers.svg")
 
-# Detecting outliers
+# Outliers are clearly visible, let's now use Tukey method to detect samples having multiple outliers
+
+iqr = IQR_technique(data, 4, data.columns[1:23])
+outliers_dict, multi_outliers = iqr.detect()
+#print(f"\nIndices with corrseponding amount of outliers: {outliers_dict}")
+#print(f"\nSamples having more than {iqr.min_outliers_number} outliers: {multi_outliers}")
+
+# Some samples have a lot of outliers in different features, although as we are facing medical data, it is not so obvious
+# to drop them off. Anyway it is nice to have them detected
+
