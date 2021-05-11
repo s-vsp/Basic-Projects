@@ -109,3 +109,9 @@ plt.title("Correlation heatmap", fontsize=30)
 # The strongest correlation with status is detected for "spread1" and "PPE", but still they are not on super-high level
 # We can't deny status dependance on other features.
 
+
+# 1.4.2. Class count #
+
+plt.figure(dpi=150, figsize=(12,8))
+sns.countplot(data["status"], palette="magma_r")
+#plt.savefig("Class count.svg")
