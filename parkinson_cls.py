@@ -114,4 +114,5 @@ plt.title("Correlation heatmap", fontsize=30)
 
 plt.figure(dpi=150, figsize=(12,8))
 sns.countplot(data["status"], palette="magma_r")
+plt.title("Class count", fontsize=20)
 #plt.savefig("Class count.svg")
