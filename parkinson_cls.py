@@ -117,3 +117,16 @@ sns.countplot(data["status"], palette="magma_r")
 plt.title("Class count", fontsize=20)
 #plt.savefig("Class count.svg")
 
+
+# 1.4.3. Skewness of features #
+
+skewness = [data[feature].skew() for feature in data.columns[1:23]]
+
+plt.figure(figsize=(28,14), dpi=250)
+for i, skew, feature in zip(range(1,23), skewness, data.columns[1:23]):
+    plt.subplot(11,2,i)
+    sns.distplot(data[feature], color="#411074", label="Skewness: %.2f"%(skew))
+    plt.legend(loc="best")
+    plt.tight_layout()
+    plt.suptitle("Skewness of features", fontsize=30)
+#plt.savefig("Skewness of features.svg")
