@@ -7,3 +7,4 @@
 > 1.4. Basic data visulaizations <br /> 
 >> 1.4.1. Correlation heatmap <br />
 >> 1.4.2. Value counts <br />
+>> 1.4.3. Skewness of features <br />
