@@ -130,3 +130,57 @@ for i, skew, feature in zip(range(1,23), skewness, data.columns[1:23]):
     plt.tight_layout()
     plt.suptitle("Skewness of features", fontsize=30)
 #plt.savefig("Skewness of features.svg")
+
+
+## 1.5. Log transformation ##
+
+# Performing log transform on the mostly skewed features along the dataset
+# For the statistical model the tail region may act as an outlier, so instead of dropping samples
+# having outliers as mentioned before, I decided to perform log transform on those with highest skewness
+
+skewed_feature = data.columns[[skewness.index(i)+1 for i in skewness if i > 3.3]] # +1 as there is still 'name' feature
+
+# 'MDVP:RAP', 'Jitter:DDP', 'NHR' are the ones, to perform log transform on them
+
+
+plt.figure(dpi=250, figsize=(24, 6))
+plt.subplot(2,3,1)
+sns.distplot(data["MDVP:RAP"], color="#411074", label="Skewness: %.2f"%(skewness[5]))
+plt.legend(loc="best")
+plt.tight_layout()
+
+plt.subplot(2,3,2)
+sns.distplot(data["Jitter:DDP"], color="#411074", label="Skewness: %.2f"%(skewness[7]))
+plt.legend(loc="best")
+plt.tight_layout()
+plt.title("Before Log transform", fontsize=18)
+
+plt.subplot(2,3,3)
+sns.distplot(data["NHR"], color="#411074", label="Skewness: %.2f"%(skewness[14]))
+plt.legend(loc="best")
+plt.tight_layout()
+
+
+data["MDVP:RAP"] = data["MDVP:RAP"].map(lambda x: np.log(x))
+data["Jitter:DDP"] = data["Jitter:DDP"].map(lambda x: np.log(x))
+data["NHR"] = data["NHR"].map(lambda x: np.log(x))
+
+
+plt.subplot(2,3,4)
+sns.distplot(data["MDVP:RAP"], color="#af315b", label="Skewness: %.2f"%(data["MDVP:RAP"].skew()))
+plt.legend(loc="best")
+plt.tight_layout()
+
+plt.subplot(2,3,5)
+sns.distplot(data["Jitter:DDP"] , color="#af315b", label="Skewness: %.2f"%(data["Jitter:DDP"].skew()))
+plt.legend(loc="best")
+plt.tight_layout()
+plt.title("After Log Transform", fontsize=18)
+
+plt.subplot(2,3,6)
+sns.distplot(data["NHR"], color="#af315b", label="Skewness: %.2f"%(data["NHR"].skew()))
+plt.legend(loc="best")
+plt.tight_layout()
+
+plt.suptitle("Log transform", fontsize=26, y =1.15, x=0.51)
+#plt.savefig("Log transform.svg", bbox_inches="tight")

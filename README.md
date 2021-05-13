@@ -8,3 +8,4 @@
 >> 1.4.1. Correlation heatmap <br />
 >> 1.4.2. Value counts <br />
 >> 1.4.3. Skewness of features <br />
+> 1.5. Log transform <br />
