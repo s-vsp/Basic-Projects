@@ -131,7 +131,6 @@ for i, skew, feature in zip(range(1,23), skewness, data.columns[1:23]):
     plt.suptitle("Skewness of features", fontsize=30)
 #plt.savefig("Skewness of features.svg")
 
-
 ## 1.5. Log transformation ##
 
 # Performing log transform on the mostly skewed features along the dataset
