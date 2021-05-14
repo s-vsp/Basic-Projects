@@ -12,5 +12,5 @@
 > 1.5. Log transform <br />
 
 ## 2. Modeling
-> 2.1. Classifier selection
-> 2.2. Hyperparameters tuning
+> 2.1. Classifier selection <br />
+> 2.2. Hyperparameters tuning <br />
