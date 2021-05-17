@@ -14,3 +14,13 @@
 ## 2. Modeling
 > 2.1. Classifier selection <br />
 > 2.2. Hyperparameters tuning <br />
+>> 2.2.1. Nested Cross-validation
+>
+> 2.3. Learning curves <br />
+> 2.4. Validation curves <br />
+> 2.5. ROC curve and AUC <br />
+> 2.6. Prediction <br />
+
+## 3. Post-processing and final analysis
+> 3.1. Confusion matrix <br />
+> 3.2. Cost complexity pruning <br />
