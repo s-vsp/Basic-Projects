@@ -24,3 +24,5 @@
 ## 3. Post-processing and final analysis
 > 3.1. Confusion matrix <br />
 > 3.2. Cost complexity pruning <br />
+> 3.3. Trees comparison <br />
+> 3.4. Tree visualization
