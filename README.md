@@ -7,7 +7,7 @@ Description of the files provided in this project's repository:
 > parkinson_cls.py - Python file, having all the same computations as main.ipynb, but everything is provided just in one script. Preferable to use in Spyder for better visualisations <br />
 > plots - folder with all the plots and figures from the main file. Most saved in .svg vector format <br />
 > OwnLibrary.py - Python file, mini-library having one function, used in the proceeding <br />
-> parkinson.data - data file from UCI datasets
+> parkinson.data - data file from UCI datasets <br />
 > raw_spyder_data.spydata - raw data saved from Spyder console
 
 
