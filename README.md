@@ -1,5 +1,16 @@
 # Parkinson disease classification
 
+Data belongs to UCI and can be found -> http://archive.ics.uci.edu/ml/datasets.php
+
+Description of the files provided in this project's repository:
+> main.ipynb - main Jupyter Notebook having all the computations <br />
+> parkinson_cls.py - Python file, having all the same computations as main.ipynb, but everything is provided just in one script. Preferable to use in Spyder for better visualisations <br />
+> plots - folder with all the plots and figures from the main file. Most saved in .svg vector format <br />
+> OwnLibrary.py - Python file, mini-library having one function, used in the proceeding <br />
+> parkinson.data - data file from UCI datasets
+> raw_spyder_data.spydata - raw data saved from Spyder console
+
+
 ## 1. Data Preprocessing
 > 1.1. Loading data <br /> 
 > 1.2. Checking for missing values <br /> 
