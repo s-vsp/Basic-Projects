@@ -8,7 +8,6 @@ Description of the files provided in this project's repository:
 > plots - folder with all the plots and figures from the main file. Most saved in .svg vector format <br />
 > OwnLibrary.py - Python file, mini-library having one function, used in the proceeding <br />
 > parkinson.data - data file from UCI datasets <br />
-> raw_spyder_data.spydata - raw data saved from Spyder console
 
 
 ## 1. Data Preprocessing
